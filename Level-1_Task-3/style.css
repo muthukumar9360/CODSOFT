@@ -1,0 +1,86 @@
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --btn: #f3f3f3;
+  --operator: #ffc107;
+  --equal: #28a745;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+  --btn: #333;
+  --operator: #ff9800;
+  --equal: #4caf50;
+  --shadow: rgba(255, 255, 255, 0.1);
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 10px;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+h1 {
+  margin-bottom: 10px;
+}
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  font-size: 50px;
+  right: 20px;
+}
+.calculator-container {
+  width: 100%;
+  max-width: 400px;
+}
+.calculator {
+  background: var(--btn);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px var(--shadow);
+}
+.output {
+  background: var(--bg);
+  padding: 20px;
+  font-size: 2rem;
+  text-align: right;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.btn {
+  padding: 20px;
+  font-size: 1.2rem;
+  background: var(--btn);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #ddd;
+}
+.operator {
+  background: var(--operator);
+  color: #000;
+}
+.equal {
+  grid-column: span 2;
+  background: var(--equal);
+  color: white;
+}
+input[type="checkbox"] {
+  display: none;
+}
